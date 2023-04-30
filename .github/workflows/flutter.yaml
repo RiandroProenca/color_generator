@@ -40,6 +40,7 @@ jobs:
           if [ -d test ]; then dirs_to_analyse+=" test"; fi
           if [ -d example ]; then dirs_to_analyse+=" example"; fi
 
+          echo "directories= ${{ dirs_to_analyse }}"
           if [ dirs_to_analyse != "" ]
           then
             dart run dart_code_metrics:metrics \
